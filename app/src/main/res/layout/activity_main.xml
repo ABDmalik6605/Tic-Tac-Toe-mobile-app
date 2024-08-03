@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/choose"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Single Player"
+        android:backgroundTint="@color/red"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Double Player"
+        android:textSize="17dp"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.6"
+        app:layout_constraintHorizontal_bias="1"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Loading Screen Layout -->
+    <LinearLayout
+        android:id="@+id/loadingScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/img_2"
+        android:visibility="visible">
+        <ProgressBar
+            android:id="@+id/loadBar"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:indeterminate="true"
+            android:visibility="visible"
+            android:indeterminateTint="@color/green"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_marginTop="350dp"/>
+
+        <TextView
+            android:id="@+id/loadText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:visibility="visible"
+            android:textColor="@color/green"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/clickToContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click to continue"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            android:visibility="gone"
+            android:layout_marginBottom="50dp"/>
+        <TextView
+            android:id="@+id/tips"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            android:background="@color/black"
+            android:textAlignment="center"
+            android:textColor="@color/lime"
+            android:layout_marginTop="40dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
