@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import kotlin.random.Random
 
@@ -39,17 +40,26 @@ class SinglePlayer : AppCompatActivity() {
     private lateinit var rightdiagonalred: ImageView
     private lateinit var leftdiagonalblue: ImageView
     private lateinit var rightdiagonalblue: ImageView
+    private lateinit var layout: ConstraintLayout
 
     private var game: Boolean = false
     private var choose: Int = 0
     private var boolArray: BooleanArray = BooleanArray(9)
+    private var difficulty: Int = 2
+    private var opponent: Int = 2
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.single_player)
-
+        val intent = intent
+        difficulty = intent.getIntExtra("EXTRA_DIFFICULTY", 2)
+        opponent = intent.getIntExtra("EXTRA_INTEGER", 0)
         initUI()
         setListeners()
+    }
+    private fun setBackgroundImage(imageResId: Int) {
+        layout.setBackgroundResource(imageResId)
     }
     private fun initUI(){
         button1=findViewById(R.id.button1)
@@ -87,6 +97,9 @@ class SinglePlayer : AppCompatActivity() {
         choose++
         turn.text="Make your move"
         turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
+        layout = findViewById(R.id.main)
+        if (opponent==1)
+            setBackgroundImage(R.drawable.sukuna2)
     }
     private fun checkwin(){
         if (button1.text!="" && button1.text==button2.text && button1.text==button3.text)
@@ -141,7 +154,7 @@ class SinglePlayer : AppCompatActivity() {
             }
             else if (button1.text=="O") {
                 result2.text = "Player 2"
-                verticalLineBlue1.visibility-View.VISIBLE
+                verticalLineBlue1.visibility=View.VISIBLE
             }
             game=true
             turn.text=""
@@ -155,7 +168,7 @@ class SinglePlayer : AppCompatActivity() {
             }
             else if (button2.text=="O") {
                 result2.text = "Player 2"
-                verticalLineBlue2.visibility-View.VISIBLE
+                verticalLineBlue2.visibility=View.VISIBLE
             }
             game=true
             turn.text=""
@@ -169,7 +182,7 @@ class SinglePlayer : AppCompatActivity() {
             }
             else if (button3.text=="O") {
                 result2.text = "Player 2"
-                verticalLineBlue3.visibility-View.VISIBLE
+                verticalLineBlue3.visibility=View.VISIBLE
             }
             game=true
             turn.text=""
@@ -238,199 +251,195 @@ class SinglePlayer : AppCompatActivity() {
     }
     private fun checkuserwin(): Boolean {
         var userWin=false
-        if (!boolArray[0] && !game && !userWin){
-            button1.text = "O"
-            checkwin()
-            if (!game){
-                button1.text = ""
+        if (difficulty>2) {
+            if (!boolArray[0] && !game && !userWin) {
+                button1.text = "O"
+                checkwin()
+                if (!game) {
+                    button1.text = ""
+                } else {
+                    stopuser()
+                    button1.text = "X"
+                    boolArray[0] = true
+                    turn.text = "Make your move"
+                    turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                    userWin = true
+                }
             }
-            else{
-                stopuser()
-                button1.text = "X"
-                boolArray[0]=true
-                turn.text="Make your move"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
-                userWin= true
+            if (!boolArray[1] && !game && !userWin) {
+                button2.text = "O"
+                checkwin()
+                if (!game) {
+                    button2.text = ""
+                } else {
+                    stopuser()
+                    button2.text = "X"
+                    turn.text = "Make your move"
+                    turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                    boolArray[1] = true
+                    userWin = true
+                }
             }
-        }
-        if (!boolArray[1] && !game && !userWin){
-            button2.text = "O"
-            checkwin()
-            if (!game){
-                button2.text = ""
+            if (!boolArray[2] && !game && !userWin) {
+                button3.text = "O"
+                checkwin()
+                if (!game) {
+                    button3.text = ""
+                } else {
+                    stopuser()
+                    button3.text = "X"
+                    turn.text = "Make your move"
+                    turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                    boolArray[2] = true
+                    userWin = true
+                }
             }
-            else{
-                stopuser()
-                button2.text = "X"
-                turn.text="Make your move"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
-                boolArray[1]=true
-                userWin= true
+            if (!boolArray[3] && !game && !userWin) {
+                button4.text = "O"
+                checkwin()
+                if (!game) {
+                    button4.text = ""
+                } else {
+                    stopuser()
+                    button4.text = "X"
+                    turn.text = "Make your move"
+                    turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                    boolArray[3] = true
+                    userWin = true
+                }
             }
-        }
-        if (!boolArray[2] && !game && !userWin){
-            button3.text = "O"
-            checkwin()
-            if (!game){
-                button3.text = ""
+            if (!boolArray[5] && !game && !userWin) {
+                button6.text = "O"
+                checkwin()
+                if (!game) {
+                    button6.text = ""
+                } else {
+                    stopuser()
+                    button6.text = "X"
+                    turn.text = "Make your move"
+                    turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                    boolArray[5] = true
+                    userWin = true
+                }
             }
-            else{
-                stopuser()
-                button3.text = "X"
-                turn.text="Make your move"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
-                boolArray[2]=true
-                userWin= true
+            if (!boolArray[6] && !game && !userWin) {
+                button7.text = "O"
+                checkwin()
+                if (!game) {
+                    button7.text = ""
+                } else {
+                    stopuser()
+                    button7.text = "X"
+                    turn.text = "Make your move"
+                    turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                    boolArray[6] = true
+                    userWin = true
+                }
             }
-        }
-        if (!boolArray[3] && !game && !userWin){
-            button4.text = "O"
-            checkwin()
-            if (!game){
-                button4.text = ""
+            if (!boolArray[7] && !game && !userWin) {
+                button8.text = "O"
+                checkwin()
+                if (!game) {
+                    button8.text = ""
+                } else {
+                    stopuser()
+                    button8.text = "X"
+                    turn.text = "Make your move"
+                    turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                    boolArray[7] = true
+                    userWin = true
+                }
             }
-            else{
-                stopuser()
-                button4.text = "X"
-                turn.text="Make your move"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
-                boolArray[3]=true
-                userWin= true
-            }
-        }
-        if (!boolArray[5] && !game && !userWin){
-            button6.text = "O"
-            checkwin()
-            if (!game){
-                button6.text = ""
-            }
-            else{
-                stopuser()
-                button6.text = "X"
-                turn.text="Make your move"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
-                boolArray[5]=true
-                userWin= true
-            }
-        }
-        if (!boolArray[6] && !game && !userWin){
-            button7.text = "O"
-            checkwin()
-            if (!game){
-                button7.text = ""
-            }
-            else{
-                stopuser()
-                button7.text = "X"
-                turn.text="Make your move"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
-                boolArray[6]=true
-                userWin= true
-            }
-        }
-        if (!boolArray[7] && !game && !userWin){
-            button8.text = "O"
-            checkwin()
-            if (!game){
-                button8.text = ""
-            }
-            else{
-                stopuser()
-                button8.text = "X"
-                turn.text="Make your move"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
-                boolArray[7]=true
-                userWin= true
-            }
-        }
-        if (!boolArray[8] && !game && !userWin){
-            button9.text = "O"
-            checkwin()
-            if (!game){
-                button9.text = ""
-            }
-            else{
-                stopuser()
-                button9.text = "X"
-                turn.text="Make your move"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
-                boolArray[8]=true
-                userWin= true
+            if (!boolArray[8] && !game && !userWin) {
+                button9.text = "O"
+                checkwin()
+                if (!game) {
+                    button9.text = ""
+                } else {
+                    stopuser()
+                    button9.text = "X"
+                    turn.text = "Make your move"
+                    turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                    boolArray[8] = true
+                    userWin = true
+                }
             }
         }
         return userWin
     }
     private fun AIturn(){
-        if (!boolArray[0] && !game) {
-            button1.text = "X"
-            checkwin()
-            if (!game) {
-                button1.text = ""
-            } else {
-                boolArray[0] = true
+        if (difficulty>1) {
+            if (!boolArray[0] && !game) {
+                button1.text = "X"
+                checkwin()
+                if (!game) {
+                    button1.text = ""
+                } else {
+                    boolArray[0] = true
+                }
             }
-        }
-        if (!boolArray[1] && !game) {
-            button2.text = "X"
-            checkwin()
-            if (!game) {
-                button2.text = ""
-            } else {
-                boolArray[1] = true
+            if (!boolArray[1] && !game) {
+                button2.text = "X"
+                checkwin()
+                if (!game) {
+                    button2.text = ""
+                } else {
+                    boolArray[1] = true
+                }
             }
-        }
-        if (!boolArray[2] && !game) {
-            button3.text = "X"
-            checkwin()
-            if (!game) {
-                button3.text = ""
-            } else {
-                boolArray[2] = true
+            if (!boolArray[2] && !game) {
+                button3.text = "X"
+                checkwin()
+                if (!game) {
+                    button3.text = ""
+                } else {
+                    boolArray[2] = true
+                }
             }
-        }
-        if (!boolArray[3] && !game) {
-            button4.text = "X"
-            checkwin()
-            if (!game) {
-                button4.text = ""
-            } else {
-                boolArray[3] = true
+            if (!boolArray[3] && !game) {
+                button4.text = "X"
+                checkwin()
+                if (!game) {
+                    button4.text = ""
+                } else {
+                    boolArray[3] = true
+                }
             }
-        }
-        if (!boolArray[5] && !game) {
-            button6.text = "X"
-            checkwin()
-            if (!game) {
-                button6.text = ""
-            } else {
-                boolArray[5] = true
+            if (!boolArray[5] && !game) {
+                button6.text = "X"
+                checkwin()
+                if (!game) {
+                    button6.text = ""
+                } else {
+                    boolArray[5] = true
+                }
             }
-        }
-        if (!boolArray[6] && !game) {
-            button7.text = "X"
-            checkwin()
-            if (!game) {
-                button7.text = ""
-            } else {
-                boolArray[6] = true
+            if (!boolArray[6] && !game) {
+                button7.text = "X"
+                checkwin()
+                if (!game) {
+                    button7.text = ""
+                } else {
+                    boolArray[6] = true
+                }
             }
-        }
-        if (!boolArray[7] && !game) {
-            button8.text = "X"
-            checkwin()
-            if (!game) {
-                button8.text = ""
-            } else {
-                boolArray[7] = true
+            if (!boolArray[7] && !game) {
+                button8.text = "X"
+                checkwin()
+                if (!game) {
+                    button8.text = ""
+                } else {
+                    boolArray[7] = true
+                }
             }
-        }
-        if (!boolArray[8] && !game) {
-            button9.text = "X"
-            checkwin()
-            if (!game) {
-                button9.text = ""
-            } else {
-                boolArray[8] = true
+            if (!boolArray[8] && !game) {
+                button9.text = "X"
+                checkwin()
+                if (!game) {
+                    button9.text = ""
+                } else {
+                    boolArray[8] = true
+                }
             }
         }
         if (!game && !checkuserwin()) {

@@ -23,4 +23,10 @@
     <color name="teal">#008080</color>
     <color name="silver">#C0C0C0</color>
     <color name="gold">#FFD700</color>
+    <color name="light_red">#FF6F6F</color>
+    <color name="medium_red">#FF3F3F</color>
+    <color name="dark_red">#BF0000</color>
+    <color name="grassy_green">#32CD32</color>
+    <color name="dark_green">#006400</color>
+
 </resources>

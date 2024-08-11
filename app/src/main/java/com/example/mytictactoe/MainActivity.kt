@@ -44,12 +44,11 @@ class MainActivity : AppCompatActivity() {
             "Tip: The Greatest Teacher Failure is"
         )
 
-        // Select a random tip
         val randomTip = tips[Random.nextInt(tips.size)]
         tipTextView.text = randomTip
 
         button1.setOnClickListener {
-            val intent = Intent(this, SinglePlayer::class.java)
+            val intent = Intent(this, DifficultyActivity::class.java)
             startActivity(intent)
         }
 
