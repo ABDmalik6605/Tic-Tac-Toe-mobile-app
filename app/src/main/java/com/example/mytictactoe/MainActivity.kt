@@ -57,14 +57,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Show the loading screen and set a delay
         Handler(Looper.getMainLooper()).postDelayed({
             clickToContinue.visibility = View.VISIBLE
             loadBar.visibility = View.GONE
             loadText.visibility = View.GONE
         }, 7000) // 7-second delay
 
-        // Set click listener to hide the loading screen
         loadingScreen.setOnClickListener {
             if (clickToContinue.visibility == View.VISIBLE) {
                 loadingScreen.visibility = View.GONE

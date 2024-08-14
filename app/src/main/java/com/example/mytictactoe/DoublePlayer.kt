@@ -94,11 +94,15 @@ class DoublePlayer : AppCompatActivity() {
             result.text="CONGRATULATIONS!"
             if (button1.text=="X") {
                 result2.text = "Player 1"
+                result.setTextColor(ContextCompat.getColor(this, R.color.red))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.red))
                 horizontalLineRed1.visibility=View.VISIBLE
                 setBackgroundImage(R.drawable.player1win)
             }
             else if (button1.text=="O") {
                 result2.text = "Player 2"
+                result.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 horizontalLineBlue1.visibility=View.VISIBLE
                 setBackgroundImage(R.drawable.player2win)
             }
@@ -110,11 +114,15 @@ class DoublePlayer : AppCompatActivity() {
             result.text="CONGRATULATIONS!"
             if (button4.text=="X") {
                 result2.text = "Player 1"
+                result.setTextColor(ContextCompat.getColor(this, R.color.red))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.red))
                 horizontalLineRed2.visibility=View.VISIBLE
                 setBackgroundImage(R.drawable.player1win)
             }
             else if (button4.text=="O") {
                 result2.text = "Player 2"
+                result.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 horizontalLineBlue2.visibility=View.VISIBLE
                 setBackgroundImage(R.drawable.player2win)
             }
@@ -126,11 +134,15 @@ class DoublePlayer : AppCompatActivity() {
             result.text="CONGRATULATIONS!"
             if (button7.text=="X") {
                 result2.text = "Player 1"
+                result.setTextColor(ContextCompat.getColor(this, R.color.red))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.red))
                 horizontalLineRed3.visibility=View.VISIBLE
                 setBackgroundImage(R.drawable.player1win)
             }
             else if (button7.text=="O") {
                 result2.text = "Player 2"
+                result.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 horizontalLineBlue3.visibility=View.VISIBLE
                 setBackgroundImage(R.drawable.player2win)
             }
@@ -143,11 +155,15 @@ class DoublePlayer : AppCompatActivity() {
             result.text="CONGRATULATIONS!"
             if (button1.text=="X") {
                 result2.text = "Player 1"
+                result.setTextColor(ContextCompat.getColor(this, R.color.red))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.red))
                 verticalLineRed1.visibility= View.VISIBLE
                 setBackgroundImage(R.drawable.player1win)
             }
             else if (button1.text=="O") {
                 result2.text = "Player 2"
+                result.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 verticalLineBlue1.visibility=View.VISIBLE
                 setBackgroundImage(R.drawable.player2win)
             }
@@ -159,11 +175,15 @@ class DoublePlayer : AppCompatActivity() {
             result.text="CONGRATULATIONS!"
             if (button2.text=="X") {
                 result2.text = "Player 1"
+                result.setTextColor(ContextCompat.getColor(this, R.color.red))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.red))
                 verticalLineRed2.visibility= View.VISIBLE
                 setBackgroundImage(R.drawable.player1win)
             }
             else if (button2.text=="O") {
                 result2.text = "Player 2"
+                result.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 verticalLineBlue2.visibility=View.VISIBLE
                 setBackgroundImage(R.drawable.player2win)
             }
@@ -175,11 +195,15 @@ class DoublePlayer : AppCompatActivity() {
             result.text="CONGRATULATIONS!"
             if (button3.text=="X") {
                 result2.text = "Player 1"
+                result.setTextColor(ContextCompat.getColor(this, R.color.red))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.red))
                 verticalLineRed3.visibility= View.VISIBLE
                 setBackgroundImage(R.drawable.player1win)
             }
             else if (button3.text=="O") {
                 result2.text = "Player 2"
+                result.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 verticalLineBlue3.visibility=View.VISIBLE
                 setBackgroundImage(R.drawable.player2win)
             }
@@ -192,11 +216,15 @@ class DoublePlayer : AppCompatActivity() {
             result.text="CONGRATULATIONS!"
             if (button1.text=="X") {
                 result2.text = "Player 1"
+                result.setTextColor(ContextCompat.getColor(this, R.color.red))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.red))
                 rightdiagonalred.visibility=View.VISIBLE
                 setBackgroundImage(R.drawable.player1win)
             }
             else if (button1.text=="O") {
                 result2.text = "Player 2"
+                result.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 rightdiagonalblue.visibility=View.VISIBLE
                 setBackgroundImage(R.drawable.player2win)
             }
@@ -208,11 +236,15 @@ class DoublePlayer : AppCompatActivity() {
             result.text="CONGRATULATIONS!"
             if (button3.text=="X") {
                 result2.text = "Player 1"
+                result.setTextColor(ContextCompat.getColor(this, R.color.red))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.red))
                 leftdiagonalred.visibility=View.VISIBLE
                 setBackgroundImage(R.drawable.player1win)
             }
             else if (button3.text=="O") {
                 result2.text = "Player 2"
+                result.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                result2.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 leftdiagonalblue.visibility=View.VISIBLE
                 setBackgroundImage(R.drawable.player2win)
             }
@@ -222,7 +254,6 @@ class DoublePlayer : AppCompatActivity() {
         checkdraw()
     }
     private fun checkdraw(){
-        //if (!game && boolArray.all { true }){
         if (!game)
         {
             var draw=true

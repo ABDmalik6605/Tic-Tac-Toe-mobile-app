@@ -90,56 +90,134 @@ class SinglePlayer : AppCompatActivity() {
         leftdiagonalblue=findViewById(R.id.leftDiagonalBlue)
         rightdiagonalblue=findViewById(R.id.rightDiagonalBlue)
         turn=findViewById(R.id.turn)
-        turn.text="AI turn"
-        turn.setTextColor(ContextCompat.getColor(this, R.color.red))
         button5.text="X"
         boolArray[4]=true
         choose++
         turn.text="Make your move"
-        turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
+        turn.setTextColor(ContextCompat.getColor(this, R.color.white))
         layout = findViewById(R.id.main)
         if (opponent==1)
             setBackgroundImage(R.drawable.sukuna2)
+        else if (opponent==2)
+            setBackgroundImage(R.drawable.vader2)
+        else if (opponent==3)
+            setBackgroundImage(R.drawable.skynet2)
+
     }
     private fun checkwin(){
         if (button1.text!="" && button1.text==button2.text && button1.text==button3.text)
         {
-            result.text="CONGRATULATIONS!"
             if (button1.text=="X") {
-                result2.text = "Player 1"
                 horizontalLineRed1.visibility=View.VISIBLE
+                if (opponent==1){
+                    result.text="You are defeated!"
+                    result2.text = "But Stand proud,\nyou are strong"
+                    setBackgroundImage(R.drawable.sukunawin)
+                }
+                else if (opponent==2) {
+                    result.text="Defeated you are!"
+                    result2.text = "It's over. I have the high ground"
+                    setBackgroundImage(R.drawable.vaderwin)
+                }
+                else if (opponent==3) {
+                    result.text="Skynet has won!"
+                    result2.text = "You are defeated human as\nyou were destined to"
+                    setBackgroundImage(R.drawable.skynetwin)
+                }
             }
             else if (button1.text=="O") {
-                result2.text = "Player 2"
                 horizontalLineBlue1.visibility=View.VISIBLE
+                result.text="Congratulations!"
+                if (opponent==1){
+                    result2.text = "You have defeated the\n king of curses"
+                    setBackgroundImage(R.drawable.sukunalose)
+                }
+                else if (opponent==2) {
+                    result2.text = "Defeated the Dark side you have.May the force be with you"
+                    setBackgroundImage(R.drawable.vaderlose)
+                }
+                else if (opponent==3) {
+                    result2.text = "You have saved John connor\nand stopped Skynet"
+                    setBackgroundImage(R.drawable.skynetlose)
+                }
             }
             game=true
             turn.text=""
         }
         if (button4.text!="" && button4.text==button5.text && button4.text==button6.text)
         {
-            result.text="CONGRATULATIONS!"
             if (button4.text=="X") {
-                result2.text = "Player 1"
                 horizontalLineRed2.visibility=View.VISIBLE
+                if (opponent==1){
+                    result.text="You are defeated!"
+                    result2.text = "But Stand proud,\nyou are strong"
+                    setBackgroundImage(R.drawable.sukunawin)
+                }
+                else if (opponent==2) {
+                    result.text="Defeated you are!"
+                    result2.text = "It's over. I have the high ground"
+                    setBackgroundImage(R.drawable.vaderwin)
+                }
+                else if (opponent==3) {
+                    result.text="Skynet has won!"
+                    result2.text = "You are defeated human as\nyou were destined to"
+                    setBackgroundImage(R.drawable.skynetwin)
+                }
             }
             else if (button4.text=="O") {
-                result2.text = "Player 2"
                 horizontalLineBlue2.visibility=View.VISIBLE
+                result.text="Congratulations!"
+                if (opponent==1){
+                    result2.text = "You have defeated the\n king of curses"
+                    setBackgroundImage(R.drawable.sukunalose)
+                }
+                else if (opponent==2) {
+                    result2.text = "Defeated the Dark side you have.May the force be with you"
+                    setBackgroundImage(R.drawable.vaderlose)
+                }
+                else if (opponent==3) {
+                    result2.text = "You have saved John connor\nand stopped Skynet"
+                    setBackgroundImage(R.drawable.skynetlose)
+                }
             }
             game=true
             turn.text=""
         }
         if (button7.text!="" && button7.text==button8.text && button7.text==button9.text)
         {
-            result.text="CONGRATULATIONS!"
             if (button7.text=="X") {
-                result2.text = "Player 1"
                 horizontalLineRed3.visibility=View.VISIBLE
+                if (opponent==1){
+                    result.text="You are defeated!"
+                    result2.text = "But Stand proud,\nyou are strong"
+                    setBackgroundImage(R.drawable.sukunawin)
+                }
+                else if (opponent==2) {
+                    result.text="Defeated you are!"
+                    result2.text = "It's over. I have the high ground"
+                    setBackgroundImage(R.drawable.vaderwin)
+                }
+                else if (opponent==3) {
+                    result.text="Skynet has won!"
+                    result2.text = "You are defeated human as\nyou were destined to"
+                    setBackgroundImage(R.drawable.skynetwin)
+                }
             }
             else if (button7.text=="O") {
-                result2.text = "Player 2"
                 horizontalLineBlue3.visibility=View.VISIBLE
+                result.text="Congratulations!"
+                if (opponent==1){
+                    result2.text = "You have defeated the\n king of curses"
+                    setBackgroundImage(R.drawable.sukunalose)
+                }
+                else if (opponent==2) {
+                    result2.text = "Defeated the Dark side you have.May the force be with you"
+                    setBackgroundImage(R.drawable.vaderlose)
+                }
+                else if (opponent==3) {
+                    result2.text = "You have saved John connor\nand stopped Skynet"
+                    setBackgroundImage(R.drawable.skynetlose)
+                }
             }
             game=true
             turn.text=""
@@ -147,42 +225,117 @@ class SinglePlayer : AppCompatActivity() {
 
         if (button1.text!="" && button1.text==button4.text && button1.text==button7.text)
         {
-            result.text="CONGRATULATIONS!"
             if (button1.text=="X") {
-                result2.text = "Player 1"
-                verticalLineRed1.visibility= View.VISIBLE
+                verticalLineRed1.visibility=View.VISIBLE
+                if (opponent==1){
+                    result.text="You are defeated!"
+                    result2.text = "But Stand proud,\nyou are strong"
+                    setBackgroundImage(R.drawable.sukunawin)
+                }
+                else if (opponent==2) {
+                    result.text="Defeated you are!"
+                    result2.text = "It's over. I have the high ground"
+                    setBackgroundImage(R.drawable.vaderwin)
+                }
+                else if (opponent==3) {
+                    result.text="Skynet has won!"
+                    result2.text = "You are defeated human as\nyou were destined to"
+                    setBackgroundImage(R.drawable.skynetwin)
+                }
             }
             else if (button1.text=="O") {
-                result2.text = "Player 2"
                 verticalLineBlue1.visibility=View.VISIBLE
+                result.text="Congratulations!"
+                if (opponent==1){
+                    result2.text = "You have defeated the\n king of curses"
+                    setBackgroundImage(R.drawable.sukunalose)
+                }
+                else if (opponent==2) {
+                    result2.text = "Defeated the Dark side you have.May the force be with you"
+                    setBackgroundImage(R.drawable.vaderlose)
+                }
+                else if (opponent==3) {
+                    result2.text = "You have saved John connor\nand stopped Skynet"
+                    setBackgroundImage(R.drawable.skynetlose)
+                }
             }
             game=true
             turn.text=""
         }
         if (button2.text!="" && button2.text==button5.text && button2.text==button8.text)
         {
-            result.text="CONGRATULATIONS!"
             if (button2.text=="X") {
-                result2.text = "Player 1"
-                verticalLineRed2.visibility= View.VISIBLE
+                verticalLineRed2.visibility=View.VISIBLE
+                if (opponent==1){
+                    result.text="You are defeated!"
+                    result2.text = "But Stand proud,\nyou are strong"
+                    setBackgroundImage(R.drawable.sukunawin)
+                }
+                else if (opponent==2) {
+                    result.text="Defeated you are!"
+                    result2.text = "It's over. I have the high ground"
+                    setBackgroundImage(R.drawable.vaderwin)
+                }
+                else if (opponent==3) {
+                    result.text="Skynet has won!"
+                    result2.text = "You are defeated human as\nyou were destined to"
+                    setBackgroundImage(R.drawable.skynetwin)
+                }
             }
             else if (button2.text=="O") {
-                result2.text = "Player 2"
                 verticalLineBlue2.visibility=View.VISIBLE
+                result.text="Congratulations!"
+                if (opponent==1){
+                    result2.text = "You have defeated the\n king of curses"
+                    setBackgroundImage(R.drawable.sukunalose)
+                }
+                else if (opponent==2) {
+                    result2.text = "Defeated the Dark side you have.May the force be with you"
+                    setBackgroundImage(R.drawable.vaderlose)
+                }
+                else if (opponent==3) {
+                    result2.text = "You have saved John connor\nand stopped Skynet"
+                    setBackgroundImage(R.drawable.skynetlose)
+                }
             }
             game=true
             turn.text=""
         }
         if (button3.text!="" && button3.text==button6.text && button3.text==button9.text)
         {
-            result.text="CONGRATULATIONS!"
             if (button3.text=="X") {
-                result2.text = "Player 1"
-                verticalLineRed3.visibility= View.VISIBLE
+                verticalLineRed3.visibility=View.VISIBLE
+                if (opponent==1){
+                    result.text="You are defeated!"
+                    result2.text = "But Stand proud,\nyou are strong"
+                    setBackgroundImage(R.drawable.sukunawin)
+                }
+                else if (opponent==2) {
+                    result.text="Defeated you are!"
+                    result2.text = "It's over. I have the high ground"
+                    setBackgroundImage(R.drawable.vaderwin)
+                }
+                else if (opponent==3) {
+                    result.text="Skynet has won!"
+                    result2.text = "You are defeated human as\nyou were destined to"
+                    setBackgroundImage(R.drawable.skynetwin)
+                }
             }
             else if (button3.text=="O") {
-                result2.text = "Player 2"
                 verticalLineBlue3.visibility=View.VISIBLE
+                result.text="Congratulations!"
+                if (opponent==1){
+                    result2.text = "You have defeated the\n king of curses"
+                    setBackgroundImage(R.drawable.sukunalose)
+                }
+                else if (opponent==2) {
+                    result2.text = "Defeated the Dark side you have.May the force be with you"
+                    setBackgroundImage(R.drawable.vaderlose)
+                }
+                else if (opponent==3) {
+                    result2.text = "You have saved John connor\nand stopped Skynet"
+                    setBackgroundImage(R.drawable.skynetlose)
+                }
             }
             game=true
             turn.text=""
@@ -190,28 +343,78 @@ class SinglePlayer : AppCompatActivity() {
 
         if (button1.text!="" && button1.text==button5.text && button1.text==button9.text)
         {
-            result.text="CONGRATULATIONS!"
             if (button1.text=="X") {
-                result2.text = "Player 1"
                 rightdiagonalred.visibility=View.VISIBLE
+                if (opponent==1){
+                    result.text="You are defeated!"
+                    result2.text = "But Stand proud,\nyou are strong"
+                    setBackgroundImage(R.drawable.sukunawin)
+                }
+                else if (opponent==2) {
+                    result.text="Defeated you are!"
+                    result2.text = "It's over. I have the high ground"
+                    setBackgroundImage(R.drawable.vaderwin)
+                }
+                else if (opponent==3) {
+                    result.text="Skynet has won!"
+                    result2.text = "You are defeated human as\nyou were destined to"
+                    setBackgroundImage(R.drawable.skynetwin)
+                }
             }
             else if (button1.text=="O") {
-                result2.text = "Player 2"
                 rightdiagonalblue.visibility=View.VISIBLE
+                result.text="Congratulations!"
+                if (opponent==1){
+                    result2.text = "You have defeated the\n king of curses"
+                    setBackgroundImage(R.drawable.sukunalose)
+                }
+                else if (opponent==2) {
+                    result2.text = "Defeated the Dark side you have.May the force be with you"
+                    setBackgroundImage(R.drawable.vaderlose)
+                }
+                else if (opponent==3) {
+                    result2.text = "You have saved John connor\nand stopped Skynet"
+                    setBackgroundImage(R.drawable.skynetlose)
+                }
             }
             game=true
             turn.text=""
         }
         if (button3.text!="" && button3.text==button5.text && button3.text==button7.text)
         {
-            result.text="CONGRATULATIONS!"
             if (button3.text=="X") {
-                result2.text = "Player 1"
                 leftdiagonalred.visibility=View.VISIBLE
+                if (opponent==1){
+                    result.text="You are defeated!"
+                    result2.text = "But Stand proud,\nyou are strong"
+                    setBackgroundImage(R.drawable.sukunawin)
+                }
+                else if (opponent==2) {
+                    result.text="Defeated you are!"
+                    result2.text = "It's over. I have the high ground"
+                    setBackgroundImage(R.drawable.vaderwin)
+                }
+                else if (opponent==3) {
+                    result.text="Skynet has won!"
+                    result2.text = "You are defeated human as\nyou were destined to"
+                    setBackgroundImage(R.drawable.skynetwin)
+                }
             }
             else if (button3.text=="O") {
-                result2.text = "Player 2"
                 leftdiagonalblue.visibility=View.VISIBLE
+                result.text="Congratulations!"
+                if (opponent==1){
+                    result2.text = "You have defeated the\n king of curses"
+                    setBackgroundImage(R.drawable.sukunalose)
+                }
+                else if (opponent==2) {
+                    result2.text = "Defeated the Dark side you have.May the force be with you"
+                    setBackgroundImage(R.drawable.vaderlose)
+                }
+                else if (opponent==3) {
+                    result2.text = "You have saved John connor\nand stopped Skynet"
+                    setBackgroundImage(R.drawable.skynetlose)
+                }
             }
             game=true
             turn.text=""
@@ -248,6 +451,12 @@ class SinglePlayer : AppCompatActivity() {
         result.text=""
         result2.text=""
         game=false
+        if (opponent==1)
+            setBackgroundImage(R.drawable.sukuna2)
+        else if (opponent==2)
+            setBackgroundImage(R.drawable.vader2)
+        else if (opponent==3)
+            setBackgroundImage(R.drawable.skynet2)
     }
     private fun checkuserwin(): Boolean {
         var userWin=false
@@ -498,7 +707,7 @@ class SinglePlayer : AppCompatActivity() {
             if (!boolArray[0] && !game) {
                 button1.text = "O"
                 turn.text="Player 1 turn"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.red))
+                turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[0]=true
                 checkwin()
                 if (!game)
@@ -509,7 +718,7 @@ class SinglePlayer : AppCompatActivity() {
             if (!boolArray[1] && !game) {
                 button2.text = "O"
                 turn.text="Player 1 turn"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.red))
+                turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[1]=true
                 checkwin()
                 if (!game)
@@ -520,7 +729,7 @@ class SinglePlayer : AppCompatActivity() {
             if (!boolArray[2] && !game) {
                 button3.text = "O"
                 turn.text="Player 1 turn"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.red))
+                turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[2] = true
                 checkwin()
                 if (!game)
@@ -532,7 +741,7 @@ class SinglePlayer : AppCompatActivity() {
             if (!boolArray[3] && !game) {
                 button4.text = "O"
                 turn.text="Player 1 turn"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.red))
+                turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[3] = true
                 checkwin()
                 if (!game)
@@ -543,7 +752,7 @@ class SinglePlayer : AppCompatActivity() {
             if (!boolArray[4] && !game) {
                 button5.text = "O"
                 turn.text="Player 1 turn"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.red))
+                turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[4] = true
                 checkwin()
                 if (!game)
@@ -554,7 +763,7 @@ class SinglePlayer : AppCompatActivity() {
             if (!boolArray[5] && !game) {
                 button6.text = "O"
                 turn.text="Player 1 turn"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.red))
+                turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[5] = true
                 checkwin()
                 if (!game)
@@ -566,7 +775,7 @@ class SinglePlayer : AppCompatActivity() {
             if (!boolArray[6] && !game) {
                 button7.text = "O"
                 turn.text="Player 1 turn"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.red))
+                turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[6] = true
                 checkwin()
                 if (!game)
@@ -577,7 +786,7 @@ class SinglePlayer : AppCompatActivity() {
             if (!boolArray[7] && !game) {
                 button8.text = "O"
                 turn.text="Player 1 turn"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.red))
+                turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[7] = true
                 checkwin()
                 if (!game)
@@ -588,7 +797,7 @@ class SinglePlayer : AppCompatActivity() {
             if (!boolArray[8] && !game) {
                 button9.text = "O"
                 turn.text="Player 1 turn"
-                turn.setTextColor(ContextCompat.getColor(this, R.color.red))
+                turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[8] = true
                 checkwin()
                 if (!game)

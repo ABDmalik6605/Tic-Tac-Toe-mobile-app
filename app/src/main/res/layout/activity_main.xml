@@ -38,14 +38,13 @@
         app:layout_constraintHorizontal_bias="1"
         android:layout_marginTop="16dp"/>
 
-    <!-- Loading Screen Layout -->
     <LinearLayout
         android:id="@+id/loadingScreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="@drawable/img_2"
+        android:background="@drawable/yoda"
         android:visibility="visible">
         <ProgressBar
             android:id="@+id/loadBar"
