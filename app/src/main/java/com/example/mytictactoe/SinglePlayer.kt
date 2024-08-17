@@ -422,7 +422,6 @@ class SinglePlayer : AppCompatActivity() {
         checkdraw()
     }
     private fun checkdraw(){
-        //if (!game && boolArray.all { true }){
         if (!game)
         {
             var draw=true
@@ -654,7 +653,7 @@ class SinglePlayer : AppCompatActivity() {
         if (!game && !checkuserwin()) {
             var moveMade = false
             while (!moveMade) {
-                val randomIndex = Random.nextInt(0, 9) // Generates a random number between 0 and 8
+                val randomIndex = Random.nextInt(0, 9)
                 if (!boolArray[randomIndex]) {
                     when (randomIndex) {
                         0 -> {
@@ -695,7 +694,7 @@ class SinglePlayer : AppCompatActivity() {
                         }
                     }
                     turn.text = "Make your move"
-                    turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
+                    turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                     moveMade = true
                 }
             }
