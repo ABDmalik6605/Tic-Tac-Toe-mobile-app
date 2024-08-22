@@ -275,10 +275,12 @@ class DoublePlayer : AppCompatActivity() {
             if (!boolArray[0] && !game) {
                 if (choose % 2 == 0) {
                     button1.text = "X"
+                    button1.setTextColor(ContextCompat.getColor(this,R.color.red))
                     turn.text="Player 2 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 } else {
                     button1.text = "O"
+                    button1.setTextColor(ContextCompat.getColor(this,R.color.blue))
                     turn.text="Player 1 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.red))
                 }
@@ -291,10 +293,12 @@ class DoublePlayer : AppCompatActivity() {
             if (!boolArray[1] && !game) {
                 if (choose % 2 == 0) {
                     button2.text = "X"
+                    button2.setTextColor(ContextCompat.getColor(this,R.color.red))
                     turn.text="Player 2 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 } else {
                     button2.text = "O"
+                    button2.setTextColor(ContextCompat.getColor(this,R.color.blue))
                     turn.text="Player 1 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.red))
                 }
@@ -307,10 +311,12 @@ class DoublePlayer : AppCompatActivity() {
             if (!boolArray[2] && !game) {
                 if (choose % 2 == 0) {
                     button3.text = "X"
+                    button3.setTextColor(ContextCompat.getColor(this,R.color.red))
                     turn.text="Player 2 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 } else {
                     button3.text = "O"
+                    button3.setTextColor(ContextCompat.getColor(this,R.color.blue))
                     turn.text="Player 1 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.red))
                 }
@@ -324,10 +330,12 @@ class DoublePlayer : AppCompatActivity() {
             if (!boolArray[3] && !game) {
                 if (choose % 2 == 0) {
                     button4.text = "X"
+                    button4.setTextColor(ContextCompat.getColor(this,R.color.red))
                     turn.text="Player 2 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 } else {
                     button4.text = "O"
+                    button4.setTextColor(ContextCompat.getColor(this,R.color.blue))
                     turn.text="Player 1 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.red))
                 }
@@ -340,10 +348,12 @@ class DoublePlayer : AppCompatActivity() {
             if (!boolArray[4] && !game) {
                 if (choose % 2 == 0) {
                     button5.text = "X"
+                    button5.setTextColor(ContextCompat.getColor(this,R.color.red))
                     turn.text="Player 2 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 } else {
                     button5.text = "O"
+                    button5.setTextColor(ContextCompat.getColor(this,R.color.blue))
                     turn.text="Player 1 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.red))
                 }
@@ -356,10 +366,12 @@ class DoublePlayer : AppCompatActivity() {
             if (!boolArray[5] && !game) {
                 if (choose % 2 == 0) {
                     button6.text = "X"
+                    button6.setTextColor(ContextCompat.getColor(this,R.color.red))
                     turn.text="Player 2 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 } else {
                     button6.text = "O"
+                    button6.setTextColor(ContextCompat.getColor(this,R.color.blue))
                     turn.text="Player 1 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.red))
                 }
@@ -373,10 +385,12 @@ class DoublePlayer : AppCompatActivity() {
             if (!boolArray[6] && !game) {
                 if (choose % 2 == 0) {
                     button7.text = "X"
+                    button7.setTextColor(ContextCompat.getColor(this,R.color.red))
                     turn.text="Player 2 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 } else {
                     button7.text = "O"
+                    button7.setTextColor(ContextCompat.getColor(this,R.color.blue))
                     turn.text="Player 1 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.red))
                 }
@@ -389,10 +403,12 @@ class DoublePlayer : AppCompatActivity() {
             if (!boolArray[7] && !game) {
                 if (choose % 2 == 0) {
                     button8.text = "X"
+                    button8.setTextColor(ContextCompat.getColor(this,R.color.red))
                     turn.text="Player 2 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 } else {
                     button8.text = "O"
+                    button8.setTextColor(ContextCompat.getColor(this,R.color.blue))
                     turn.text="Player 1 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.red))
                 }
@@ -405,10 +421,12 @@ class DoublePlayer : AppCompatActivity() {
             if (!boolArray[8] && !game) {
                 if (choose % 2 == 0) {
                     button9.text = "X"
+                    button9.setTextColor(ContextCompat.getColor(this,R.color.red))
                     turn.text="Player 2 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.blue))
                 } else {
                     button9.text = "O"
+                    button9.setTextColor(ContextCompat.getColor(this,R.color.blue))
                     turn.text="Player 1 turn"
                     turn.setTextColor(ContextCompat.getColor(this, R.color.red))
                 }

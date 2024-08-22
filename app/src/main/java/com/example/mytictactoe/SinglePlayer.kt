@@ -90,9 +90,8 @@ class SinglePlayer : AppCompatActivity() {
         leftdiagonalblue=findViewById(R.id.leftDiagonalBlue)
         rightdiagonalblue=findViewById(R.id.rightDiagonalBlue)
         turn=findViewById(R.id.turn)
-        button5.text="X"
-        boolArray[4]=true
-        choose++
+        //button5.text="X"
+        //boolArray[4]=true
         turn.text="Make your move"
         turn.setTextColor(ContextCompat.getColor(this, R.color.white))
         layout = findViewById(R.id.main)
@@ -468,9 +467,8 @@ class SinglePlayer : AppCompatActivity() {
                 } else {
                     stopuser()
                     button1.text = "X"
+                    button1.setTextColor(ContextCompat.getColor(this,R.color.red))
                     boolArray[0] = true
-                    turn.text = "Make your move"
-                    turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                     userWin = true
                 }
             }
@@ -482,8 +480,7 @@ class SinglePlayer : AppCompatActivity() {
                 } else {
                     stopuser()
                     button2.text = "X"
-                    turn.text = "Make your move"
-                    turn.setTextColor(ContextCompat.getColor(this, R.color.white))
+                    button2.setTextColor(ContextCompat.getColor(this,R.color.red))
                     boolArray[1] = true
                     userWin = true
                 }
@@ -496,8 +493,7 @@ class SinglePlayer : AppCompatActivity() {
                 } else {
                     stopuser()
                     button3.text = "X"
-                    turn.text = "Make your move"
-                    turn.setTextColor(ContextCompat.getColor(this, R.color.white))
+                    button3.setTextColor(ContextCompat.getColor(this,R.color.red))
                     boolArray[2] = true
                     userWin = true
                 }
@@ -510,9 +506,21 @@ class SinglePlayer : AppCompatActivity() {
                 } else {
                     stopuser()
                     button4.text = "X"
-                    turn.text = "Make your move"
-                    turn.setTextColor(ContextCompat.getColor(this, R.color.white))
+                    button4.setTextColor(ContextCompat.getColor(this,R.color.red))
                     boolArray[3] = true
+                    userWin = true
+                }
+            }
+            if (!boolArray[4] && !game && !userWin) {
+                button5.text = "O"
+                checkwin()
+                if (!game) {
+                    button5.text = ""
+                } else {
+                    stopuser()
+                    button5.text = "X"
+                    button5.setTextColor(ContextCompat.getColor(this,R.color.red))
+                    boolArray[4] = true
                     userWin = true
                 }
             }
@@ -524,8 +532,7 @@ class SinglePlayer : AppCompatActivity() {
                 } else {
                     stopuser()
                     button6.text = "X"
-                    turn.text = "Make your move"
-                    turn.setTextColor(ContextCompat.getColor(this, R.color.white))
+                    button6.setTextColor(ContextCompat.getColor(this,R.color.red))
                     boolArray[5] = true
                     userWin = true
                 }
@@ -538,8 +545,7 @@ class SinglePlayer : AppCompatActivity() {
                 } else {
                     stopuser()
                     button7.text = "X"
-                    turn.text = "Make your move"
-                    turn.setTextColor(ContextCompat.getColor(this, R.color.white))
+                    button7.setTextColor(ContextCompat.getColor(this,R.color.red))
                     boolArray[6] = true
                     userWin = true
                 }
@@ -552,8 +558,7 @@ class SinglePlayer : AppCompatActivity() {
                 } else {
                     stopuser()
                     button8.text = "X"
-                    turn.text = "Make your move"
-                    turn.setTextColor(ContextCompat.getColor(this, R.color.white))
+                    button8.setTextColor(ContextCompat.getColor(this,R.color.red))
                     boolArray[7] = true
                     userWin = true
                 }
@@ -566,8 +571,7 @@ class SinglePlayer : AppCompatActivity() {
                 } else {
                     stopuser()
                     button9.text = "X"
-                    turn.text = "Make your move"
-                    turn.setTextColor(ContextCompat.getColor(this, R.color.white))
+                    button9.setTextColor(ContextCompat.getColor(this,R.color.red))
                     boolArray[8] = true
                     userWin = true
                 }
@@ -579,6 +583,7 @@ class SinglePlayer : AppCompatActivity() {
         if (difficulty>1) {
             if (!boolArray[0] && !game) {
                 button1.text = "X"
+                button1.setTextColor(ContextCompat.getColor(this,R.color.red))
                 checkwin()
                 if (!game) {
                     button1.text = ""
@@ -588,6 +593,7 @@ class SinglePlayer : AppCompatActivity() {
             }
             if (!boolArray[1] && !game) {
                 button2.text = "X"
+                button2.setTextColor(ContextCompat.getColor(this,R.color.red))
                 checkwin()
                 if (!game) {
                     button2.text = ""
@@ -597,6 +603,7 @@ class SinglePlayer : AppCompatActivity() {
             }
             if (!boolArray[2] && !game) {
                 button3.text = "X"
+                button3.setTextColor(ContextCompat.getColor(this,R.color.red))
                 checkwin()
                 if (!game) {
                     button3.text = ""
@@ -606,6 +613,7 @@ class SinglePlayer : AppCompatActivity() {
             }
             if (!boolArray[3] && !game) {
                 button4.text = "X"
+                button4.setTextColor(ContextCompat.getColor(this,R.color.red))
                 checkwin()
                 if (!game) {
                     button4.text = ""
@@ -613,8 +621,19 @@ class SinglePlayer : AppCompatActivity() {
                     boolArray[3] = true
                 }
             }
+            if (!boolArray[4] && !game) {
+                button5.text = "X"
+                button5.setTextColor(ContextCompat.getColor(this,R.color.red))
+                checkwin()
+                if (!game) {
+                    button5.text = ""
+                } else {
+                    boolArray[4] = true
+                }
+            }
             if (!boolArray[5] && !game) {
                 button6.text = "X"
+                button6.setTextColor(ContextCompat.getColor(this,R.color.red))
                 checkwin()
                 if (!game) {
                     button6.text = ""
@@ -624,6 +643,7 @@ class SinglePlayer : AppCompatActivity() {
             }
             if (!boolArray[6] && !game) {
                 button7.text = "X"
+                button7.setTextColor(ContextCompat.getColor(this,R.color.red))
                 checkwin()
                 if (!game) {
                     button7.text = ""
@@ -633,6 +653,7 @@ class SinglePlayer : AppCompatActivity() {
             }
             if (!boolArray[7] && !game) {
                 button8.text = "X"
+                button8.setTextColor(ContextCompat.getColor(this,R.color.red))
                 checkwin()
                 if (!game) {
                     button8.text = ""
@@ -642,6 +663,7 @@ class SinglePlayer : AppCompatActivity() {
             }
             if (!boolArray[8] && !game) {
                 button9.text = "X"
+                button9.setTextColor(ContextCompat.getColor(this,R.color.red))
                 checkwin()
                 if (!game) {
                     button9.text = ""
@@ -658,38 +680,47 @@ class SinglePlayer : AppCompatActivity() {
                     when (randomIndex) {
                         0 -> {
                             button1.text = "X"
+                            button1.setTextColor(ContextCompat.getColor(this,R.color.red))
                             boolArray[0] = true
                         }
                         1 -> {
                             button2.text = "X"
+                            button2.setTextColor(ContextCompat.getColor(this,R.color.red))
                             boolArray[1] = true
                         }
                         2 -> {
                             button3.text = "X"
+                            button3.setTextColor(ContextCompat.getColor(this,R.color.red))
                             boolArray[2] = true
                         }
                         3 -> {
                             button4.text = "X"
+                            button4.setTextColor(ContextCompat.getColor(this,R.color.red))
                             boolArray[3] = true
                         }
                         4 -> {
                             button5.text = "X"
+                            button5.setTextColor(ContextCompat.getColor(this,R.color.red))
                             boolArray[4] = true
                         }
                         5 -> {
                             button6.text = "X"
+                            button6.setTextColor(ContextCompat.getColor(this,R.color.red))
                             boolArray[5] = true
                         }
                         6 -> {
                             button7.text = "X"
+                            button7.setTextColor(ContextCompat.getColor(this,R.color.red))
                             boolArray[6] = true
                         }
                         7 -> {
                             button8.text = "X"
+                            button8.setTextColor(ContextCompat.getColor(this,R.color.red))
                             boolArray[7] = true
                         }
                         8 -> {
                             button9.text = "X"
+                            button9.setTextColor(ContextCompat.getColor(this,R.color.red))
                             boolArray[8] = true
                         }
                     }
@@ -705,6 +736,7 @@ class SinglePlayer : AppCompatActivity() {
         button1.setOnClickListener{
             if (!boolArray[0] && !game) {
                 button1.text = "O"
+                button1.setTextColor(ContextCompat.getColor(this,R.color.blue))
                 turn.text="Player 1 turn"
                 turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[0]=true
@@ -716,6 +748,7 @@ class SinglePlayer : AppCompatActivity() {
         button2.setOnClickListener{
             if (!boolArray[1] && !game) {
                 button2.text = "O"
+                button2.setTextColor(ContextCompat.getColor(this,R.color.blue))
                 turn.text="Player 1 turn"
                 turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[1]=true
@@ -727,6 +760,7 @@ class SinglePlayer : AppCompatActivity() {
         button3.setOnClickListener{
             if (!boolArray[2] && !game) {
                 button3.text = "O"
+                button3.setTextColor(ContextCompat.getColor(this,R.color.blue))
                 turn.text="Player 1 turn"
                 turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[2] = true
@@ -739,6 +773,7 @@ class SinglePlayer : AppCompatActivity() {
         button4.setOnClickListener{
             if (!boolArray[3] && !game) {
                 button4.text = "O"
+                button4.setTextColor(ContextCompat.getColor(this,R.color.blue))
                 turn.text="Player 1 turn"
                 turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[3] = true
@@ -750,6 +785,7 @@ class SinglePlayer : AppCompatActivity() {
         button5.setOnClickListener{
             if (!boolArray[4] && !game) {
                 button5.text = "O"
+                button5.setTextColor(ContextCompat.getColor(this,R.color.blue))
                 turn.text="Player 1 turn"
                 turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[4] = true
@@ -761,6 +797,7 @@ class SinglePlayer : AppCompatActivity() {
         button6.setOnClickListener{
             if (!boolArray[5] && !game) {
                 button6.text = "O"
+                button6.setTextColor(ContextCompat.getColor(this,R.color.blue))
                 turn.text="Player 1 turn"
                 turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[5] = true
@@ -773,6 +810,7 @@ class SinglePlayer : AppCompatActivity() {
         button7.setOnClickListener{
             if (!boolArray[6] && !game) {
                 button7.text = "O"
+                button7.setTextColor(ContextCompat.getColor(this,R.color.blue))
                 turn.text="Player 1 turn"
                 turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[6] = true
@@ -784,6 +822,7 @@ class SinglePlayer : AppCompatActivity() {
         button8.setOnClickListener{
             if (!boolArray[7] && !game) {
                 button8.text = "O"
+                button8.setTextColor(ContextCompat.getColor(this,R.color.blue))
                 turn.text="Player 1 turn"
                 turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[7] = true
@@ -795,6 +834,7 @@ class SinglePlayer : AppCompatActivity() {
         button9.setOnClickListener{
             if (!boolArray[8] && !game) {
                 button9.text = "O"
+                button9.setTextColor(ContextCompat.getColor(this,R.color.blue))
                 turn.text="Player 1 turn"
                 turn.setTextColor(ContextCompat.getColor(this, R.color.white))
                 boolArray[8] = true
