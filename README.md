@@ -72,14 +72,14 @@ A feature-packed **Tic‑Tac‑Toe** game for Android, built in **Kotlin**, that
 ## 🗂️ Project Structure
 
 Tic-Tac-Toe-mobile-app/
-├── MainActivity.kt # Game logic and UI controls
-├── GameEngine.kt # Win/draw checking, AI behavior
-├── res/
-│ ├── drawable/ # Wallpapers, icons (Yoda, Messi, Ronaldo, etc.)
-│ └── values/
-│ └── strings.xml # All in-game text and character names
-└── AndroidManifest.xml # App configuration
-
+├── MainActivity.kt         # Game logic and UI controls
+├── GameEngine.kt           # Win/draw checking, AI behavior
+├── res/                    # Android resources
+│   ├── drawable/           # Wallpapers, icons (Yoda, Messi, Ronaldo, etc.)
+│   └── values/             
+│       └── strings.xml     # All in-game text and character names
+├── AndroidManifest.xml     # App configuration
+└── README.md               # You are here 😄
 
 ---
 
