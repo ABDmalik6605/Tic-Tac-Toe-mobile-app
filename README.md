@@ -1,35 +1,58 @@
-# Tic‑Tac‑Toe Mobile App 🎯
+# Tic‑Tac‑Toe Mobile App 🎮
 
-A two-player Tic‑Tac‑Toe game built with **Kotlin** for Android, featuring intuitive gameplay, reset functionality, and a clean, responsive interface.
-
----
-
-## 🚀 Features
-
-- **Two-player mode**: Play locally with a friend on the same device.  
-- **Classic 3×3 grid**: Tap cells to play 'X' or 'O'.  
-- **Win/draw detection**: Automatically identifies and announces the result.  
-- **Reset button**: Start a new game instantly at any time.  
-- **Intuitive UI**: Built using Android Studio and Kotlin for smooth interactions.
+A feature-packed **Tic‑Tac‑Toe** game for Android, built in **Kotlin**, that combines classic gameplay with **cinematic flair**, **AI battles**, and iconic character themes. Whether you're facing off against Darth Vader or sparking the legendary Ronaldo vs Messi rivalry — In short, You are not dealing with an average TIC-TAC-TOE anymore.
 
 ---
 
-## 📱 Demo
+## ✨ Features
 
-_Add screenshots or a short GIF of gameplay here to showcase your app._
+- 🌌 **Master Yoda Loading Tips**  
+  - Start the game with wisdom from Yoda himself during a custom loading screen.
+  
+- 🤖 **Single Player Mode**  
+  Choose your opponent and difficulty:
+  
+  - **Difficulty Levels**:
+    - 🟢 Easy
+    - 🟡 Medium
+    - 🔴 Hard
+
+  - **AI Opponents**:
+    - 🦾 **Darth Vader** – The force is strong with this one.
+    - 👹 **Sukuna** – The king of curses plays dirty.
+    - 🧠 **Skynet** – A machine that learns fast... and plays to win.
+
+- ⚔️ **Two Player Mode**  
+  Play locally with a friend:
+  - Styled as a **Ronaldo vs Messi** rivalry
+  - 🎉 When Player 1 (Ronaldo) wins → Ronaldo wallpaper appears  
+  - 🏆 When Player 2 (Messi) wins → Messi wallpaper appears
+
+- 🎨 **Themed UI & Pop Culture References**
+  - Custom sound effects, visual cues, and Easter eggs throughout
+  - A fun homage to Star Wars, Jujutsu Kaisen, Terminator, football icons, and more
+
+- 🧠 **Smart Win Detection & Game Flow**
+  - Automatically identifies win/draw conditions
+  - Reset button to restart quickly
+
+---
+
+## 📱 Screenshots
+
+_Add game screenshots or GIFs here if available_
 
 ---
 
 ## ⚙️ Getting Started
 
-### Prerequisites
+### Requirements
 
-- [Android Studio](https://developer.android.com/studio) (recommended)
-- Android SDK (API Level 21+)
-- Kotlin support (included in Android Studio)
+- Android Studio
+- Kotlin
+- Android SDK (API level 21+)
 
-### Setup
+### Installation
 
-1. **Clone the repo**  
-   ```bash
-   git clone https://github.com/ABDmalik6605/Tic-Tac-Toe-mobile-app.git
+```bash
+git clone https://github.com/ABDmalik6605/Tic-Tac-Toe-mobile-app.git
